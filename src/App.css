@@ -88,9 +88,66 @@
 #contact-us{
   background-color: black;
   color: whitesmoke;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+
+#contact-us p{
+  width: 60vw;
+  text-align: center;
+  line-height: 2.2vw;
 }
 
 h1{
   font-size: 2.5rem;
+}
+
+#contact-us-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 60vw;
+  height: auto;
+  margin: 3vw;
+  padding: 5vw;
+  box-sizing: border-box;
+  row-gap: 1vw;
+} 
+
+#contact-us-form div{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  column-gap: 1vw;
+}
+
+.name-input{
+  width: 23.4vw;
+}
+
+#contact-us-form input,
+#contact-us-form textarea,
+#contact-us-form select {
+  padding: 1vw;
+  border: 1px solid plum;
+  border-radius: 1vw;
+  font-size: 1.1rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.only-input{
+  width: 100%;
+}
+
+.phone-number-div select{
+  color: rgb(117,117,117);
+  width: 15vw;
+}
+
+.phone-number-div input{  
+  width: 34vw;
+}
+
+#contact-us-form textarea{
+  height: 15vw;
 }
