@@ -34,7 +34,7 @@ export default function ContactUsForm() {
             message: formData.message,
         }))
         
-        
+
         setTimeout(() =>{
             setFormData({
                 firstName: '',
@@ -64,7 +64,7 @@ export default function ContactUsForm() {
             <input type="text" id="first-name" name="firstName"  placeholder='First Name' className="name-input" value={formData.firstName} onChange={handleChange}/>
             <input type="text" id="last-name" name="lastName"  placeholder='Last Name' className="name-input" value={formData.lastName} onChange={handleChange}/>
         </div>
-        <input type="text" id="email" name="email"  placeholder='Email' className="only-input" value={formData.email} onChange={handleChange}/>
+        <input type="text" id="email" name="email"  placeholder='Email Address' className="only-input" value={formData.email} onChange={handleChange}/>
         <div className="phone-number-div"> 
             <select id="country-code" name="countryCode" onChange={handleChange} value={formData.countryCode}>
                 <option value="" disabled>

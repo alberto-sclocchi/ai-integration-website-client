@@ -8,6 +8,10 @@
   }
 }
 
+*{
+  scroll-behavior: smooth;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -115,8 +119,7 @@ h1{
   justify-content: center;
   width: 60vw;
   height: auto;
-  margin: 3vw 0;
-  padding: 5vw;
+  padding: 4vw 5vw;
   box-sizing: border-box;
   row-gap: 1vw;
 } 
