@@ -1,35 +1,81 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { countriesPhoneCodes } from './data/CountriesPhoneCodes'
 
 export default function ContactUsForm() {
 
-    const phoneCodesInputs = countriesPhoneCodes.map((countries) => {
+    const [formData, setFormData]= useState ({
+        firstName: '',
+        lastName: '',
+        email: '',
+        countryCode: '',
+        phoneNumber: '',
+        message: ''
+    })
+
+    //track formData changes
+    // useEffect(() =>{
+    //     console.log(formData);
+    // }, [formData])
+
+
+    const handleChange = (event) => {
+        setFormData((prevData) => ({...prevData,[event.target.name]: event.target.value}));
+        console.log({[event.target.name]: event.target.value});
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        setFormData(({
+            firstName: formData.firstName,
+            lastName: formData.lastName,    
+            email: formData.email,
+            phoneNumber: `+${formData.countryCode} ${formData.phoneNumber}`,
+            message: formData.message,
+        }))
+        
+        
+        setTimeout(() =>{
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                countryCode: '',
+                phoneNumber: '',
+                message: ''
+            })
+        }, 300)
+    }
+
+    const phoneCodesInputs = countriesPhoneCodes.map((countries, index) => {
         return (
-            <option key={countries.code} value={countries.code}>
+            <option key={index} value={countries.code}>
                 {countries.country} (+{countries.code})
             </option>
         )
     })
 
 
+
+
   return (
     <form id="contact-us-form">
         <div> 
-            <input type="text" id="first-name" name="first-name"  placeholder='First Name' className="name-input"/>
-            <input type="text" id="last-name" name="last-name"  placeholder='Last Name' className="name-input"/>
+            <input type="text" id="first-name" name="firstName"  placeholder='First Name' className="name-input" value={formData.firstName} onChange={handleChange}/>
+            <input type="text" id="last-name" name="lastName"  placeholder='Last Name' className="name-input" value={formData.lastName} onChange={handleChange}/>
         </div>
-        <input type="text" id="email" name="first-name"  placeholder='Email' className="only-input"/>
+        <input type="text" id="email" name="email"  placeholder='Email' className="only-input" value={formData.email} onChange={handleChange}/>
         <div className="phone-number-div"> 
-            <select id="country-code" name="country-code">
+            <select id="country-code" name="countryCode" onChange={handleChange} value={formData.countryCode}>
                 <option value="" disabled>
                     Select Country Code
                 </option>
                 {phoneCodesInputs}
             </select>
-            <input type="text" id="phone-number" name="phone-number"  placeholder='Phone Number'/>
+            <input type="text" id="phoneNumber" name="phoneNumber"  placeholder='Phone Number' value={formData.phoneNumber} onChange={handleChange}/>
         </div>
-        <textarea type="text" name="message" className="only-input" placeholder='Tell us your message...'/>
-        <button>Submit</button>
+        <textarea type="text" id="message" name="message" className="only-input" placeholder='Tell us your message...' value={formData.message} onChange={handleChange}/>
+        <button onClick={handleSubmit}>Submit</button>
     </form>
   )
 }
