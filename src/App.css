@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important; /* Disable animations */
+    transition: none !important; /* Disable transitions */
+  }
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -77,7 +84,7 @@
 }
 
 .section{
-  height: 1000px;
+  height: auto;
   width: 100vw;
   padding-top: 8vw;
   display: flex;
@@ -108,7 +115,7 @@ h1{
   justify-content: center;
   width: 60vw;
   height: auto;
-  margin: 3vw;
+  margin: 3vw 0;
   padding: 5vw;
   box-sizing: border-box;
   row-gap: 1vw;
@@ -133,6 +140,7 @@ h1{
   border-radius: 1vw;
   font-size: 1.1rem;
   font-family: 'Lato', sans-serif;
+  background-color: whitesmoke;
 }
 
 .only-input{
@@ -150,4 +158,36 @@ h1{
 
 #contact-us-form textarea{
   height: 15vw;
+}
+
+
+#contact-us > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2vw;
+}
+
+#contact-us img{
+  width: 35vw;
+  height: auto;
+  animation: rotating 7s linear infinite;
+}
+
+
+@keyframes rotating{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+/*Temporary Style*/
+
+#about-us,
+#projects {
+  height: 1000px;
 }

@@ -29,6 +29,7 @@ export default function ContactUsForm() {
             <input type="text" id="phone-number" name="phone-number"  placeholder='Phone Number'/>
         </div>
         <textarea type="text" name="message" className="only-input" placeholder='Tell us your message...'/>
+        <button>Submit</button>
     </form>
   )
 }
