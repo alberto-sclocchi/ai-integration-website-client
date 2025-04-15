@@ -22,8 +22,9 @@ export default function ContactUsForm() {
 
 
     const handleChange = (event) => {
+        
         setFormData((prevData) => ({...prevData,[event.target.name]: event.target.value}));
-        console.log({[event.target.name]: event.target.value});
+        console.log(formData);
     }
 
     const handleSubmit = (event) => {
@@ -45,7 +46,7 @@ export default function ContactUsForm() {
 
     const phoneCodesInputs = countriesPhoneCodes.map((countries, index) => {
         return (
-            <option key={index} value={countries.code}>
+            <option key={index} value={`${countries.country}_${countries.code}`}>
                 {countries.country} (+{countries.code})
             </option>
         )

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import ContactUsForm from '../message/ContactUsForm.jsx'
 import geometricShape from '../../images/geometric-shape.png'
-import MessageContext from '../message/context/MessageContext.context.js';
 
 export default function ContactUs() {
   return (
