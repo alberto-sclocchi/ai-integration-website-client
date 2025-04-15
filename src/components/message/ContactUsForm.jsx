@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { countriesPhoneCodes } from './data/CountriesPhoneCodes'
+import MessageContext from './context/MessageContext.context';
 
 export default function ContactUsForm() {
 
@@ -11,6 +12,8 @@ export default function ContactUsForm() {
         phoneNumber: '',
         message: ''
     })
+
+    const {sendMessage, result } = useContext(MessageContext);
 
     //track formData changes
     // useEffect(() =>{
@@ -26,14 +29,15 @@ export default function ContactUsForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        setFormData(({
+        const updatedData = (({
             firstName: formData.firstName,
             lastName: formData.lastName,    
             email: formData.email,
             phoneNumber: `+${formData.countryCode} ${formData.phoneNumber}`,
             message: formData.message,
         }))
-        
+
+        sendMessage(updatedData);
 
         setTimeout(() =>{
             setFormData({
@@ -60,6 +64,7 @@ export default function ContactUsForm() {
 
   return (
     <form id="contact-us-form">
+        <div className='result-form-div'>{!!result && <p className='result-form'> {result } </p> }</div>
         <div> 
             <input type="text" id="first-name" name="firstName"  placeholder='First Name' className="name-input" value={formData.firstName} onChange={handleChange}/>
             <input type="text" id="last-name" name="lastName"  placeholder='Last Name' className="name-input" value={formData.lastName} onChange={handleChange}/>
