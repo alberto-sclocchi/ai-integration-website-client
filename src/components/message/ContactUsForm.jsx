@@ -29,15 +29,7 @@ export default function ContactUsForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const updatedData = (({
-            firstName: formData.firstName,
-            lastName: formData.lastName,    
-            email: formData.email,
-            phoneNumber: `+${formData.countryCode} ${formData.phoneNumber}`,
-            message: formData.message,
-        }))
-
-        sendMessage(updatedData);
+        sendMessage(formData);
 
         setTimeout(() =>{
             setFormData({

@@ -24,7 +24,7 @@ export const MessageProvider = ({children}) => {
 
         setTimeout(() => {
             setResult(null)
-        }, 5000)
+        }, 15000)
     }
 
     const getMessages = async () => {
