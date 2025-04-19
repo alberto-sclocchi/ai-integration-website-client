@@ -14,7 +14,7 @@ export default function MessagesList() {
   return (
     <div className='section'>
         <h1>Messages List</h1>   
-        {!!messages ? <div> {displayMessages()} </div> : <p></p>}     
+        {!!messages && <div> {displayMessages()} </div>}     
     </div>
   )
 }

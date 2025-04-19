@@ -220,7 +220,8 @@ h1{
 /*Temporary Style*/
 
 #about-us,
-#projects {
+#projects, 
+#services {
   height: 1000px;
 }
 
@@ -234,22 +235,23 @@ h1{
 
 @keyframes fadeInScale {
   0% {
-    opacity: 0; /* Start invisible */
-    transform: scale(0.8); /* Start slightly smaller */
+    opacity: 0; 
+    transform: scale(0.8); 
     color: lightgrey;
-    text-shadow: none; /* No shadow at the start */
+    text-shadow: none; 
   }
   50% {
-    opacity: 0.5; /* Half-visible */
-    transform: scale(1.05); /* Slightly larger for emphasis */
+    opacity: 0.5; 
+    transform: scale(1.05); 
     color: lightslategray;
-    text-shadow: 0 0 5px lightslategray; /* Add subtle shadow */
+    text-shadow: 0 0 5px lightslategray; 
   }
   100% {
-    opacity: 1; /* Fully visible */
-    transform: scale(1); /* Back to normal size */
-    color: plum; /* Final color */
-    text-shadow: 0 0 10px plum, 0 0 20px plum; /* Add glowing effect */  }
+    opacity: 1; 
+    transform: scale(1); 
+    color: plum; 
+    text-shadow: 0 0 10px plum, 0 0 20px plum; 
+  }
 }
 
 .result-form-div{
@@ -257,3 +259,4 @@ h1{
   max-width: 50vw;
   margin-top: 2vw;
 }
+
