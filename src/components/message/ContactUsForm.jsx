@@ -13,7 +13,7 @@ export default function ContactUsForm() {
         message: ''
     })
 
-    const {sendMessage, result } = useContext(MessageContext);
+    const {sendMessage, result, setResult } = useContext(MessageContext);
 
     //track formData changes
     // useEffect(() =>{
@@ -27,21 +27,31 @@ export default function ContactUsForm() {
         console.log(formData);
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
-        sendMessage(formData);
+        const messageResult = await sendMessage(formData);
 
-        setTimeout(() =>{
-            setFormData({
-                firstName: '',
-                lastName: '',
-                email: '',
-                countryCode: '',
-                phoneNumber: '',
-                message: ''
-            })
-        }, 300)
+        console.log({messageResult});
+
+        if (messageResult.success){
+            setTimeout(() =>{
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    countryCode: '',
+                    phoneNumber: '',
+                    message: ''
+                })
+            }, 300)
+        }
+
+
+        setTimeout(() => {
+            setResult(null)
+        }, 10000)
+       
     }
 
     const phoneCodesInputs = countriesPhoneCodes.map((countries, index) => {

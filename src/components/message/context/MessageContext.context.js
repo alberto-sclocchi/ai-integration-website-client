@@ -17,14 +17,12 @@ export const MessageProvider = ({children}) => {
 
         if (!successAPI.success){
             setResult(successAPI.message)
+            return successAPI; 
         }
         else {
             setResult(successAPI.message)
+            return successAPI; 
         }
-
-        setTimeout(() => {
-            setResult(null)
-        }, 15000)
     }
 
     const getMessages = async () => {
