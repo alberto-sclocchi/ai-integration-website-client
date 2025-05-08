@@ -16,11 +16,11 @@ export const MessageProvider = ({children}) => {
         const successAPI = await service.createMessage(message);
 
         if (!successAPI.success){
-            setResult(successAPI.message)
+            setResult(successAPI)
             return successAPI; 
         }
         else {
-            setResult(successAPI.message)
+            setResult(successAPI)
             return successAPI; 
         }
     }

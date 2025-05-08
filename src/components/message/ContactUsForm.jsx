@@ -32,7 +32,7 @@ export default function ContactUsForm() {
 
         const messageResult = await sendMessage(formData);
 
-        console.log({messageResult});
+        // console.log({messageResult});
 
         if (messageResult.success){
             setTimeout(() =>{
@@ -63,16 +63,14 @@ export default function ContactUsForm() {
     })
 
 
-
-
   return (
     <form id="contact-us-form">
-        <div className='result-form-div'>{!!result && <p className='result-form'> {result } </p> }</div>
+        <div className='result-form-div'>{!!result && <p className='result-form'> {result.message } </p> }</div>
         <div> 
             <input type="text" id="first-name" name="firstName"  placeholder='First Name' className="name-input" value={formData.firstName} onChange={handleChange}/>
             <input type="text" id="last-name" name="lastName"  placeholder='Last Name' className="name-input" value={formData.lastName} onChange={handleChange}/>
         </div>
-        <input type="text" id="email" name="email"  placeholder='Email Address' className="only-input" value={formData.email} onChange={handleChange}/>
+        <input type="text" id="email" name="email"  placeholder='Email Address' className={"only-input"} value={formData.email} onChange={handleChange}/>
         <div className="phone-number-div"> 
             <select id="country-code" name="countryCode" onChange={handleChange} value={formData.countryCode}>
                 <option value="" disabled>
