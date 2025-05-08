@@ -219,11 +219,12 @@ h1{
 
 /*Temporary Style*/
 
-#about-us,
+/* #about-us,
 #projects, 
-#services {
+#services,
+#contact-info{
   height: 1000px;
-}
+} */
 
 .result-form{
   position:relative;
