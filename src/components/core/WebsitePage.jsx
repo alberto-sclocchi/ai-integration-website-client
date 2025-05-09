@@ -4,10 +4,12 @@ import ContactUs from '../sections/ContactUs'
 import Projects from '../sections/Projects'
 import Services from '../sections/Services'
 import ContactInfo from '../sections/ContactInfo'
+import HomePage from '../sections/HomePage'
 
 export default function WebsitePage() {
   return (
     <div className="website-body">
+        <HomePage />
         <AboutUs />
         {/* <Projects /> */}
         <Services />

@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <div id="navbar" >
       <div id="home-navbar-div">
-        <Link to="#about-us" className="home-link"><img src={homeIcon} alt="home-icon"/></Link>
+        <Link to="#home-page" className="home-link"><img src={homeIcon} alt="home-icon"/></Link>
       </div>
 
       <div id="links-navbar-div">
