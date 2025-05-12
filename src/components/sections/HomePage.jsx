@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import spaceImage from '../../images/space-image.jpg'
-import Spline from '@splinetool/react-spline';
+import { HashLink as Link } from 'react-router-hash-link'
 
 
 export default function HomePage() {
@@ -14,7 +14,7 @@ export default function HomePage() {
       const { clientX, clientY } = e;
       if (cursor) {
         const scrollVerticalOffset = window.scrollY;
-        cursor.style.transform = `translate3d(${clientX - 20}px, ${clientY - 20 + scrollVerticalOffset}px, 0)`;
+        cursor.style.transform = `translate3d(${clientX - 40}px, ${clientY - 40 + scrollVerticalOffset}px, 0)`;
       }
     };
 
@@ -30,7 +30,11 @@ export default function HomePage() {
         <div className="background-container">
           <div className="background-info">
             <h3>WELCOME EVERYONE</h3>
-            <p>Innovating the future, one solution at a time. We are creators, dreamers, and problem-solvers, turning ideas into reality to empower your success.</p>          
+            <p>Innovating the future, one solution at a time. We are creators, dreamers, and problem-solvers, turning ideas into reality to empower your success.</p>        
+            <div className='home-button-container'>
+              <Link to="#services" className="home-button">Explore Our Services</Link>
+              <Link to="#about-us" className="home-button">Learn More About Us</Link>
+            </div>  
           </div>
         </div> 
     </div>

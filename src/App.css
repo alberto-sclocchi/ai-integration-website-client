@@ -323,6 +323,7 @@ h1{
   margin: 0;
   padding: 0;
   width: 100%;
+  min-height: fit-content;
   display: flex;
   flex-direction: column;
   background-color: black;
@@ -410,8 +411,39 @@ h1{
 
 }
 
-#home-page:hover .cursor-glow {
+#home-page:hover .cursor-glow{
   opacity: 1;
 }
+
+.home-button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2vw;
+  margin: 4vw;
+}
+
+.home-button{
+  background-color: plum;
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: none;
+  font-size: 1.5rem;
+  padding: 1vw 2vw;
+  border-radius: 1vw;
+  margin: 1vw;
+  border: none;
+  font-family: 'Orbitron', sans-serif;
+  transition: background-color 0.4s ease-in-out;
+  border: 1px solid plum; 
+}
+
+.home-button:hover{
+  background-color: rgb(16,23,36);
+  border: 1px solid plum;
+}
+
+
 
 
