@@ -279,7 +279,7 @@ h1{
 
 .services-card{
   width: 40vw;
-  height: 17vw;
+  min-height: 17vw;
   background-color: plum;
   margin: 2vw;
   padding: 1.5vw 1vw;
@@ -314,7 +314,7 @@ h1{
 
 #about-us{
   font-size: 1.4rem;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.800);
 }
 
 
@@ -328,6 +328,7 @@ h1{
   background-color: black;
   overflow-x: hidden;
   cursor: none;
+  overflow: visible;
 }
 
 .background-image{
@@ -380,7 +381,7 @@ h1{
   align-items: center;
   font-family: 'Orbitron', sans-serif;
   width: 70vw;
-  /* max-height: fit-content; */
+  max-height: fit-content;
 }
 
 .robot{
@@ -412,4 +413,5 @@ h1{
 #home-page:hover .cursor-glow {
   opacity: 1;
 }
+
 
