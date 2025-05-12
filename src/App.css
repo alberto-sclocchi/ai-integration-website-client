@@ -48,7 +48,7 @@
 
 .home-link:hover > img{
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .navbar-link {
@@ -327,6 +327,7 @@ h1{
   flex-direction: column;
   background-color: black;
   overflow-x: hidden;
+  cursor: none;
 }
 
 .background-image{
@@ -370,3 +371,22 @@ h1{
   flex-direction: row;
   justify-content: center;  
 }
+
+.cursor-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(circle, plum, transparent 70%);
+  mix-blend-mode: screen;
+  opacity: 0;
+
+}
+
+#home-page:hover .cursor-glow {
+  opacity: 1;
+}
+
