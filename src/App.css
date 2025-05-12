@@ -337,33 +337,56 @@ h1{
   object-fit: cover;
   position: relative;
   z-index: 1;
-  opacity: 0.3;
+  opacity: 0.4;
   animation: fadeOutImg 10s linear infinite;
 }
 
 
 @keyframes fadeOutImg {
   50%{
-      opacity: 0.7;
+      opacity: 0.8;
       filter: hue-rotate(70deg);
 
   }
   0%, 100%{
-      opacity: 0.3;
+      opacity: 0.4;
       filter: hue-rotate(30deg);
   }
 }
 
-#home-page h3 {
+
+.background-container{
   position: absolute;
-  top: 20%; 
-  left: 50%; 
-  transform: translateX(-50%); 
+  width: 100vw;
+  height: auto;
+  top: 25%;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2vw;
+}
+
+.background-info{
   color: whitesmoke; 
   font-size: 2rem; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  text-shadow: 2px 2px 5px whitesmoke; 
   z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  width: 70vw;
+  /* max-height: fit-content; */
 }
+
+.robot{
+  border: 1px solid plum;
+}
+
 .footer{
   width: 100%;
   height: 6vw;
@@ -376,8 +399,8 @@ h1{
   position: absolute;
   top: 0;
   left: 0;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   pointer-events: none;
   z-index: 9999;
   background: radial-gradient(circle, plum, transparent 70%);
