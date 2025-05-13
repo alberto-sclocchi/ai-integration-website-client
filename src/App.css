@@ -314,7 +314,26 @@ h1{
 
 #about-us{
   font-size: 1.4rem;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.800);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4vw;
+}
+
+#about-us div{
+  width: 50vw;
+  min-height: 32vw;
+}
+
+.about-us-info{
+  width: 100vw;
+  color: whitesmoke;
+  text-align: center;
+  padding: 0vw 3vw;
+  line-height: 2.2vw;
 }
 
 
@@ -340,7 +359,7 @@ h1{
   position: relative;
   z-index: 1;
   opacity: 0.4;
-  animation: fadeOutImg 10s linear infinite;
+  animation: fadeOutImg 6s linear infinite;
 }
 
 
@@ -385,9 +404,9 @@ h1{
   max-height: fit-content;
 }
 
-.robot{
+/* .robot{
   border: 1px solid plum;
-}
+} */
 
 .footer{
   width: 100%;
@@ -445,5 +464,42 @@ h1{
 }
 
 
+.scroller-list li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  font-size: 2rem;
+  border-radius: 5px;
+  flex-shrink: 0;
+  object-fit: cover;
+  width: 9vw;
+}
 
+.scroller{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.800);
+  width: 100vw;
+  --gap: 20px;
+  gap: var(--gap);
+  overflow: hidden;
+}
 
+.scroller-list[data-animated="true"]{
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  animation: scrolling 5s linear infinite;
+  width: max-content;
+  white-space: nowrap;
+  gap: var(--gap);
+  padding: 0;
+}
+
+@keyframes scrolling {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}

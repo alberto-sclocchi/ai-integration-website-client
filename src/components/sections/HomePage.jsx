@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
 import spaceImage from '../../images/space-image.jpg'
 import { HashLink as Link } from 'react-router-hash-link'
+import { useEffect, useRef } from 'react';
 
 
 export default function HomePage() {
