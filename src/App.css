@@ -491,7 +491,7 @@ h1{
   list-style: none;
   flex-direction: row;
   flex-wrap: nowrap;
-  animation: scrolling 5s linear infinite;
+  animation: scrolling 20s linear infinite;
   width: max-content;
   white-space: nowrap;
   gap: var(--gap);
