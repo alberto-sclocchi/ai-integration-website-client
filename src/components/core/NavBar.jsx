@@ -19,7 +19,7 @@ export default function NavBar() {
       </div>
 
       <div id="contact-us-navbar-div">
-        <Link to="#contact-us" className="contact-us-link">Contact Us</Link>
+        <Link to="#contact-us" className="contact-us-link">Message Us</Link>
       </div>
     </div>
   )
