@@ -539,4 +539,21 @@ h1{
 #contact-info a{
   text-decoration: none;
   color: whitesmoke;
+  position: relative;
+}
+
+#contact-info a::after{
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Position the line slightly below the text */
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the line */
+  background-color: plum; /* Line color */
+  transition: width 0.5s ease-in-out; /* Smooth expansion */
+  z-index: 100000;
+}
+
+#contact-info a:hover::after {
+  width: 100%; /* Expand the line to full width on hover */
 }
