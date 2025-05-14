@@ -13,7 +13,8 @@
 }
 
 
-.App {
+.website-body,
+.App{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,7 +114,8 @@
 }
 
 #contact-us p,
-#services p{
+#services p,
+#contact-info p{
   width: 60vw;
   text-align: center;
   line-height: 2.2vw;
@@ -173,7 +175,7 @@ h1{
 #contact-us-form select {
   padding: 1vw;
   border: 1px solid plum;
-  border-radius: 1vw;
+  border-radius: 0.75vw;
   font-size: 1.1rem;
   font-family: 'Lato', sans-serif;
   background-color: whitesmoke;
@@ -333,7 +335,7 @@ h1{
   color: whitesmoke;
   text-align: center;
   padding: 0vw 3vw;
-  line-height: 2.2vw;
+  line-height: 2.4vw;
 }
 
 
@@ -502,4 +504,39 @@ h1{
   to {
     transform: translateX(calc(-100% - var(--gap)));
   }
+}
+
+#contact-info{
+  background-image: url("./images/stars.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  padding-bottom: 5vw;
+  width: 89vw;
+  border-radius: 1.25vw;
+  margin-bottom: 4vw;
+  box-shadow: 0.3vw 0.4vw 1.2vw plum;
+  border: 1px solid plum;
+}
+
+#contact-info ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 4vw;
+  padding: 2vw;
+}
+
+#contact-info li{
+  border: 1px solid plum;
+  border-radius: 1.25vw;
+  padding: 1.5vw 2.5vw;
+}
+
+#contact-info a{
+  text-decoration: none;
+  color: whitesmoke;
 }

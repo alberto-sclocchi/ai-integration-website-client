@@ -2,8 +2,6 @@ import React from 'react'
 import azureImg from '../../images/azure.png'
 import awsImg from '../../images/aws.png'
 import vmwareImg from '../../images/vmware.png'
-import siemImg from '../../images/siem.png'
-import ztaImg from '../../images/zta.png'
 
 export default function Scroller() {
   return (
