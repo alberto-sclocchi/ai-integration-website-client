@@ -3,8 +3,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation: none !important; /* Disable animations */
-    transition: none !important; /* Disable transitions */
+    animation: none !important; 
+    transition: none !important; 
   }
 }
 
@@ -290,6 +290,9 @@ h1{
   border-radius: 2vw;
   box-shadow: 0.3vw 0.3vw 1vw rgb(16,23,36);
   transition: all 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .services-card:hover{
@@ -405,10 +408,6 @@ h1{
   width: 70vw;
   max-height: fit-content;
 }
-
-/* .robot{
-  border: 1px solid plum;
-} */
 
 .footer{
   width: 100%;
@@ -556,4 +555,78 @@ h1{
 
 #contact-info a:hover::after {
   width: 100%; /* Expand the line to full width on hover */
+}
+
+@media only screen and (max-width: 1200px) {
+  .robot{
+    display: none;
+  }
+
+  #about-us div{
+    width: 80vw;
+  }
+
+  .about-us-info{
+    line-height: 3.5vw;
+  }
+
+  #contact-us p,
+  #services p,
+  #contact-info p{
+    width: 80vw;
+    line-height: 3.5vw;
+  }
+}
+
+
+@media only screen and (max-width: 850px) {
+
+  #navbar{
+    width: 90vw;
+    height: 6vw;
+    top: 2.5vw;
+  }
+
+  .contact-us-link{
+    font-size: 1rem;
+  }
+
+  .navbar-link{
+    font-size: 1rem;
+    padding: 2vw;
+  }
+
+  .background-info{
+    font-size: 1.5rem;
+    width: 80vw;
+  }
+
+  .services-card h4{
+    font-size: 1.5rem;
+  }
+
+   .services-card ul{
+    font-size: 1rem;
+   }
+}
+
+@media only screen and (max-width: 675px) {
+
+  #contact-us img{
+    display: none !important;
+  } 
+
+  #contact-us-form {
+    width: 80vw;
+  }
+
+  .name-input{
+    width: 33.4vw;
+  }
+
+  .phone-number-div input{  
+    width: 54vw;
+  }
+
+
 }
