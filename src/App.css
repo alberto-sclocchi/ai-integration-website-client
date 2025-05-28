@@ -415,6 +415,7 @@ h1{
   display: flex;
   flex-direction: row;
   justify-content: center;  
+  text-align: center;
 }
 
 .cursor-glow {
@@ -593,7 +594,7 @@ h1{
 
   .navbar-link{
     font-size: 1rem;
-    padding: 2vw;
+    padding: 1.8vw;
   }
 
   .background-info{
@@ -608,6 +609,14 @@ h1{
    .services-card ul{
     font-size: 1rem;
    }
+
+    #contact-info li{
+    font-size: 1.25rem;
+  }
+
+   .scroller-list li{
+    width: 15vw;
+  }
 }
 
 @media only screen and (max-width: 675px) {
@@ -628,5 +637,95 @@ h1{
     width: 54vw;
   }
 
+  .contact-us-link{
+    font-size: 0.9rem;
+  }
 
+  .navbar-link{
+    font-size: 0.9rem;
+    padding: 1.6vw
+  }
+
+  #contact-info li{
+    font-size: 1.1rem;
+  }
+
+  .home-link{
+    display: none;
+  }
+
+  .services-card ul{
+    display: none;
+  }
+
+  .home-button{
+    font-size: 1.2rem;
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+
+  #navbar{
+    height: 12vw;
+  }
+
+  .navbar-link{
+    font-size: 0.8rem;
+    padding: 3.8vw 1.5vw;
+  }
+
+  .contact-us-link{
+    font-size: 0.8rem;
+    padding: 2vw 1vw;
+  }    
+
+
+  #contact-info li{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact-info{
+    width: 92vw;
+  }
+
+  #contact-us p,
+  #services p,
+  #contact-info p,
+  .about-us-info{
+    line-height: 7vw;
+  }
+
+  .home-button{
+    width: 35vw;
+    margin-top: 5vw;
+  }
+
+  .scroller-list li{
+    width: 25vw;
+  }
+
+  .footer{
+    font-size: 0.9rem;
+  }
+
+  #contact-us-form textarea{
+    height: 22vw;
+  }
+
+  #contact-us-form button{
+    margin: 4vw;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+
+  .services-card h4{
+    font-size: 1.2rem;
+  }
 }
