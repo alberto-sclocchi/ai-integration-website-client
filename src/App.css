@@ -617,6 +617,10 @@ h1{
    .scroller-list li{
     width: 15vw;
   }
+
+   .home-link img{
+    width: 4.5vw;
+   }
 }
 
 @media only screen and (max-width: 675px) {
