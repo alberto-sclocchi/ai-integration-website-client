@@ -6,7 +6,7 @@ export default function ContactUs() {
   return (
     <div id="contact-us" className="section">
         <h1>Message Us</h1>
-        <p>We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, <span style={{color: 'plum', fontWeight: "900"}}>feel free to reach out using the form below.</span></p>
+        <p>We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, <span style={{color: '#014f7f', fontWeight: "900"}}>feel free to reach out using the form below.</span></p>
         <div>
             <ContactUsForm />
             <div>

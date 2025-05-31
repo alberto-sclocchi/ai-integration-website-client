@@ -41,7 +41,7 @@ export default function Services() {
     <div id="services" className="section">
       <h1>Services</h1>
 
-      <p>At <span style={{color: 'plum', fontWeight: "900"}}>10th Capital AI</span>, we offer a comprehensive suite of IT services designed to meet the unique needs of your business. Our team of experts is dedicated to delivering innovative solutions that drive efficiency, security, and growth.</p>
+      <p>At <span style={{color: '#014f7f', fontWeight: "900"}}>10th Capital AI</span>, we offer a comprehensive suite of IT services designed to meet the unique needs of your business. Our team of experts is dedicated to delivering innovative solutions that drive efficiency, security, and growth.</p>
       
       <div className="services-cards-container">
         <div className="services-line">

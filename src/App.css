@@ -32,23 +32,26 @@
   align-items: center;
   position: fixed;
   top:1.2vw;
-  border: 1px solid plum;
+  border: 1px solid #014f7f;
   border-radius: 1vw;
   padding: 0.1vw 2.5vw;
   font-family: 'Orbitron', sans-serif;
-  box-shadow: 0.3vw 0.4vw 1.2vw plum;
+  box-shadow: 0.3vw 0.4vw 1.2vw #014f7f;
   z-index: 1000;
 }
 
 .home-link > img{
-  width: 3.5vw;
-  opacity: 0.7;
+  width: 4vw;
+  opacity: 0.75;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #014f7f;
+  box-shadow: 0vw 0vw 1vw #014f7f;
 }
 
 .home-link:hover > img{
-  opacity: 1;
+  opacity: 0.9;
   transform: scale(1.1);
 }
 
@@ -63,8 +66,8 @@
 }
 
 .navbar-link:hover {
-  color: plum; /* Optional: Change text color on hover */
-  background-color: rgba(218, 214, 214, 0.41);
+  color: #014f7f; /* Optional: Change text color on hover */
+  background-color: rgba(218, 214, 214, 0.650);
 }
 
 .navbar-link::after {
@@ -74,7 +77,7 @@
   left: 0;
   width: 0; /* Start with no width */
   height: 2px; /* Thickness of the line */
-  background-color: plum; /* Line color */
+  background-color: #014f7f; /* Line color */
   transition: width 0.5s ease-in-out; /* Smooth expansion */
 }
 
@@ -85,7 +88,7 @@
 .contact-us-link{
   text-decoration: none;
   color: whitesmoke;
-  background-color: plum;
+  background-color: #014f7f;
   border-radius: 1vw;
   font-size: 1.2rem;
   position: relative; /* Required for the pseudo-element */
@@ -95,7 +98,7 @@
 }
 
 .contact-us-link:hover{
-  box-shadow: 0vw 0vw 1.2vw plum;
+  box-shadow: 0vw 0vw 1.2vw #014f7f;
 }
 
 .section{
@@ -138,7 +141,7 @@ h1{
 } 
 
 #contact-us-form button{
-  background-color: plum;
+  background-color: #014f7f;
   color: whitesmoke;
   font-size: 1.2rem;
   padding: 1vw 2vw;
@@ -148,7 +151,7 @@ h1{
   cursor: pointer;
   font-family: 'Orbitron', sans-serif;
   transition: background-color 0.4s ease-in-out;
-  border: 1px solid plum; 
+  border: 1px solid #014f7f; 
 }
 
 #contact-us > p{
@@ -156,7 +159,7 @@ h1{
 }
 #contact-us-form button:hover{
   background-color: rgb(16,23,36);
-  border: 1px solid plum;
+  border: 1px solid #014f7f;
 }
 
 #contact-us-form div{
@@ -174,7 +177,7 @@ h1{
 #contact-us-form textarea,
 #contact-us-form select {
   padding: 1vw;
-  border: 1px solid plum;
+  border: 1px solid #014f7f;
   border-radius: 0.75vw;
   font-size: 1.1rem;
   font-family: 'Lato', sans-serif;
@@ -210,16 +213,16 @@ h1{
 #contact-us img{
   width: 35vw;
   height: auto;
-  animation: rotating 7s linear infinite;
+  animation: translate 3.75s ease-in-out infinite;
+  opacity: 0.85;
 }
 
-
-@keyframes rotating{
-  from{
-    transform: rotate(0deg);
+@keyframes translate {
+  0%, 100%{
+    transform: translateY(0);
   }
-  to{
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(80px);
   }
 }
 
@@ -256,8 +259,8 @@ h1{
   100% {
     opacity: 1; 
     transform: scale(1); 
-    color: plum; 
-    text-shadow: 0 0 10px plum, 0 0 20px plum; 
+    color: #014f7f; 
+    text-shadow: 0 0 10px rgb(1, 79, 127), 0 0 20px plum; 
   }
 }
 
@@ -282,7 +285,7 @@ h1{
 .services-card{
   width: 40vw;
   min-height: 17vw;
-  background-color: plum;
+  background-color: #014f7f;
   margin: 2vw;
   padding: 1.5vw 1vw;
   border: 2px solid rgb(16,23,36);
@@ -320,7 +323,7 @@ h1{
 #about-us{
   font-size: 1.4rem;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.800);
+  background-color: rgba(0, 0, 0, 0.850);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -341,6 +344,28 @@ h1{
   line-height: 2.4vw;
 }
 
+
+.robot img{
+  width: 10vw;
+  height: auto;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #014f7f;
+  box-shadow: 0vw 0vw 1vw #014f7f;
+  opacity: 0.75;
+  animation: logoMove 5s ease-in-out infinite;
+}
+
+@keyframes logoMove{
+  0%, 100%{
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  50%{
+    opacity: 0.85;
+    transform: scale(1.1);
+  }
+}
 
 #home-page{
   position: relative; 
@@ -364,19 +389,19 @@ h1{
   position: relative;
   z-index: 1;
   opacity: 0.4;
-  animation: fadeOutImg 6s linear infinite;
+  animation: fadeOutImg 5s ease-in-out infinite;
 }
 
 
 @keyframes fadeOutImg {
   50%{
       opacity: 0.8;
-      filter: hue-rotate(70deg);
+      filter: hue-rotate(30deg);
 
   }
   0%, 100%{
       opacity: 0.4;
-      filter: hue-rotate(30deg);
+      filter: hue-rotate(0deg);
   }
 }
 
@@ -426,7 +451,7 @@ h1{
   height: 80px;
   pointer-events: none;
   z-index: 9999;
-  background: radial-gradient(circle, plum, transparent 70%);
+  background: radial-gradient(circle, #014f7f, transparent 70%);
   mix-blend-mode: screen;
   opacity: 0;
 
@@ -446,7 +471,7 @@ h1{
 }
 
 .home-button{
-  background-color: plum;
+  background-color: #014f7f;
   text-decoration: none;
   color: whitesmoke;
   cursor: none;
@@ -457,12 +482,12 @@ h1{
   border: none;
   font-family: 'Orbitron', sans-serif;
   transition: background-color 0.4s ease-in-out;
-  border: 1px solid plum; 
+  border: 1px solid #014f7f; 
 }
 
 .home-button:hover{
   background-color: rgb(16,23,36, 0.4);
-  border: 1px solid plum;
+  border: 1px solid #014f7f;
 }
 
 
@@ -517,8 +542,8 @@ h1{
   width: 89vw;
   border-radius: 1.25vw;
   margin-bottom: 4vw;
-  box-shadow: 0.3vw 0.4vw 1.2vw plum;
-  border: 1px solid plum;
+  box-shadow: 0.3vw 0.4vw 1.2vw #014f7f;
+  border: 1px solid #014f7f;
 }
 
 #contact-info ul{
@@ -531,7 +556,7 @@ h1{
 }
 
 #contact-info li{
-  border: 1px solid plum;
+  border: 1px solid #014f7f;
   border-radius: 1.25vw;
   padding: 1.5vw 2.5vw;
 }
@@ -549,7 +574,7 @@ h1{
   left: 0;
   width: 0; /* Start with no width */
   height: 2px; /* Thickness of the line */
-  background-color: plum; /* Line color */
+  background-color: #014f7f; /* Line color */
   transition: width 0.5s ease-in-out; /* Smooth expansion */
   z-index: 100000;
 }

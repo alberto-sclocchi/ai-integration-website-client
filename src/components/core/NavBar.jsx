@@ -1,12 +1,13 @@
 import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import homeIcon from '../../images/home-icon.png'
+import logoIcon from '../../images/logo.png'
 
 export default function NavBar() {
   return (
     <div id="navbar" >
       <div id="home-navbar-div">
-        <Link to="#home-page" className="home-link"><img src={homeIcon} alt="home-icon"/></Link>
+        <Link to="#home-page" className="home-link"><img src={logoIcon} alt="logo"/></Link>
       </div>
 
       <div id="links-navbar-div">
