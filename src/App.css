@@ -360,10 +360,12 @@ h1{
   0%, 100%{
     opacity: 0.75;
     transform: scale(1);
+    box-shadow: 0vw 0vw 1vw #014f7f;
   }
   50%{
     opacity: 0.85;
     transform: scale(1.1);
+    box-shadow: 0vw 0vw 1.5vw #014f7f;
   }
 }
 
